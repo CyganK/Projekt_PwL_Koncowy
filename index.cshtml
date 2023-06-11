@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Moje Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>@Resources.Header_Title</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">@Resources.Nav_About</a></li>
+                <li><a href="#experience">@Resources.Nav_Experience</a></li>
+                <li><a href="#skills">@Resources.Nav_Skills</a></li>
+                <li><a href="#contact">@Resources.Nav_Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>@Resources.Section_About</h2>
+            <p>@Model.AboutContent</p>
+        </section>
+
+        <section id="experience">
+            <h2>@Resources.Section_Experience</h2>
+            <ul>
+                @foreach (var experience in Model.Experiences)
+                {
+                    <li>
+                        <h3>@experience.Position</h3>
+                        <p>@experience.Company, @experience.Location</p>
+                        <p>@experience.Description</p>
+                    </li>
+                }
+            </ul>
+        </section>
+
+        <section id="skills">
+            <h2>@Resources.Section_Skills</h2>
+            <ul>
+                @foreach (var skill in Model.Skills)
+                {
+                    <li>@skill</li>
+                }
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>@Resources.Section_Contact</h2>
+            <p>@Resources.Contact_Email: @Model.ContactEmail</p>
+            <p>@Resources.Contact_Phone: @Model.ContactPhone</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>@Resources.Footer_Text</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
