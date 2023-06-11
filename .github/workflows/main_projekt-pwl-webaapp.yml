@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'Projekt-PwL-WebaApp'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1449B38996BF4817A1C409FFF0D648EB }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E4E25B0F4C804D20A97EA22176A22798 }}
           package: .
